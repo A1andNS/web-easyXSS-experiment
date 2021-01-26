@@ -9,7 +9,7 @@
         window.alert = function()
         {
             confirm("Good Job！");
-            window.location.href="level2.php?keyword=test";
+            window.location.href="level2.php?keyword=hacker";
         }
     </script>
     <title>Level-1</title>
