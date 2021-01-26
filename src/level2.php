@@ -1,34 +1,27 @@
-<span style="font-size:14px;"><meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="description" content="A easy XSS Experiment">
-    <meta name="keywords" content="XSS实验">
-    <meta name="sitedesc" content="XSS实验">
-    <title>level-2</title>
-    </head>
-    <body>
-    <h1 align="center">Message Board<h2>
-    <br>
-    <form action="level2.php" method="post">
-    <h2 align="center">Message:<textarea id='Mid' name="desc"></textarea></h2>
-    <br>
-    <h2 align="center">username:<input type="text" name="username"/><br></h2>
-    <br>
-    <p align="center"><input type="submit" value="submit" onclick='loction="level2.php"'/></p>
-    </form>
-    <?php
-    if(isset($_POST['username'])&&isset($_POST['desc'])){
-        if (!empty($_POST['username'])&&!empty($_POST['desc'])) {
-            $log = fopen("sql.txt", "a");
-            fwrite($log, $_POST['username'] . "\r\n");
-            fwrite($log, $_POST['desc'] . "\r\n");
-            fclose($log);
-            echo "<script language='JavaScript' type='application/javascript'>";
-            echo "window.location.href='level2_records.php'";
-            echo "</script>";
-        }
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XSS</title>
+<script>
+    window.alert = function(){
+        confirm("Good Job!");
+        window.location.href="level3.php";
     }
-    ?>
-    </body>
-    </html></span>
+</script>
+</head>
+<body>
+<?php
+    $Username="";
+    echo "<h1 align='center'>Your Username</h1>";
+    echo '<form action="" method="get">';
+    echo '<p align="center"><input type="text" name="keyword" value="'.$Username.'"></p>';
+    echo '<p align="center"><input type="submit"></p>';
+    echo '</form>';
+    echo '</br>';
+    if (isset($_GET['keyword'])){
+        $Username = $_GET['keyword'];
+        echo '<p align="center">Hello '.htmlentities($Username).'</p>';
+    }
+?>
+</body>
+</html>
