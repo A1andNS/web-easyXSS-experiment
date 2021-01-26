@@ -24,10 +24,10 @@
             fwrite($log, $_POST['username'] . "\r\n");
             fwrite($log, $_POST['desc'] . "\r\n");
             fclose($log);
+            echo "<script language='JavaScript' type='application/javascript'>";
+            echo "window.location.href='level2_records.php'";
+            echo "</script>";
         }
-        echo "<script language='JavaScript' type='application/javascript'>";
-        echo "window.location.href='level2_records.php'";
-        echo "</script>";
     }
     ?>
     </body>

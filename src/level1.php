@@ -8,7 +8,7 @@
     <script>
         window.alert = function()
         {
-            confirm("Good Job！flag1:flag{24efb7ff");
+            confirm("Good Job！");
             window.location.href="level2.php?keyword=test";
         }
     </script>

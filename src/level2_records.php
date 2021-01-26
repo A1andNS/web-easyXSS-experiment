@@ -6,6 +6,13 @@
     <meta name="keywords" content="XSS实验">
     <meta name="sitedesc" content="XSS实验">
     <title>level-2</title>
+    <script>
+        window.alert = function()
+        {
+            confirm("Good Job！");
+            window.location.href="level3.php?keyword=test";
+        }
+    </script>
     </head>
     <body>
 <?php
