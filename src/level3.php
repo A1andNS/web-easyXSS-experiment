@@ -22,5 +22,6 @@ echo "<h2 align=center>没有找到和".htmlspecialchars($str)."相关的结果.
 <input type=submit name=submit value=搜索 />
 </form>
 </center>';
+echo "<h3 align='center'>Payload的长度:".strlen($str)."</h3>";
 ?>
 </body>

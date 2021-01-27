@@ -21,7 +21,7 @@ if (isset($_GET['username'])){
     $username = $_GET['username'];
     echo "<h1 align='center'>hello ".$username."</h1>";
     echo "<p align='center'><img src=img/level1.jpg></p>";
-    echo "<h3 align='center'>Payload的长度:".strlen($str)."</h3>";
+    echo "<h3 align='center'>Payload的长度:".strlen($username)."</h3>";
 }
 else{
 
