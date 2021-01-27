@@ -18,6 +18,7 @@
     <p align="center"><input type="submit" value="submit" onclick='loction="level4.php"'/></p>
     </form>
     <?php
+    ini_set("display_errors", 0);
     if(isset($_POST['username'])&&isset($_POST['desc'])){
         if (!empty($_POST['username'])&&!empty($_POST['desc'])) {
             $log = fopen("sql.txt", "a");
