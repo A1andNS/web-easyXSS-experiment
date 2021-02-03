@@ -5,7 +5,7 @@
     <meta name="description" content="A easy XSS Experiment">
     <meta name="keywords" content="XSS实验">
     <meta name="sitedesc" content="XSS实验">
-    <title>level-2</title>
+    <title>level-4</title>
     </head>
     <body>
     <h1 align="center">Message Board<h2>
